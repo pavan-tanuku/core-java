@@ -1,0 +1,27 @@
+JAVA ---- WORA { Write Once Run Anywhere }
+
+1. Core Java
+
+-> You can run the 'Java Application' only when you have the JVM( java virtual machine ) on your machine.
+-> Java is a 'Platform Independent' but 'JVM' itself is a 'Platform Dependent'.
+-> JVM only understands 'Byte Code', so the '.java' code wrote by the programmer should compile it by 'javac' compiler and it should 'error free' then it will generate the 'Byte code(.class)' which is 'not human understandable code'.
+-> The code(.java) wrote by the programmer to execute, must contain the 'main' method then only, it will compile successfully.
+-> the 'main' method signature => public static void main(String[] args) {...}
+
+				-----------------------------------------------------------------
+				|	JDK			                                |
+				|				                                |
+				|	-------------------------------------------------	|
+				|	|	JRE					|	|	
+				|	|						|	|
+				|	|	-------------------------		|	|
+				|	|	|			|		|	|
+				|	|	|	JVM		| + libraries	|	|
+				|	|	|			|		|	|
+				|	|	|			|		|	|
+				|	|	-------------------------		|	|
+				|	|						|	|
+				|	-------------------------------------------------	|
+				|								|
+				|								|
+				-----------------------------------------------------------------
