@@ -4,24 +4,50 @@ JAVA ---- WORA { Write Once Run Anywhere }
 
 -> You can run the 'Java Application' only when you have the JVM( java virtual machine ) on your machine.
 -> Java is a 'Platform Independent' but 'JVM' itself is a 'Platform Dependent'.
--> JVM only understands 'Byte Code', so the '.java' code wrote by the programmer should compile it by 'javac' compiler and it should 'error free' then it will generate the 'Byte code(.class)' which is 'not human understandable code'.
+-> JVM only understands 'Byte Code', so the '.java' code wrote by the programmer should compile it by 'javac' compiler
+and it should 'error free' then it will generate the 'Byte code(.class)' which is 'not human understandable code'.
 -> The code(.java) wrote by the programmer to execute, must contain the 'main' method then only, it will compile successfully.
 -> the 'main' method signature => public static void main(String[] args) {...}
 
-				-----------------------------------------------------------------
-				|	JDK			                                |
-				|				                                |
-				|	-------------------------------------------------	|
-				|	|	JRE					|	|	
-				|	|						|	|
-				|	|	-------------------------		|	|
-				|	|	|			|		|	|
-				|	|	|	JVM		| + libraries	|	|
-				|	|	|			|		|	|
-				|	|	|			|		|	|
-				|	|	-------------------------		|	|
-				|	|						|	|
-				|	-------------------------------------------------	|
-				|								|
-				|								|
-				-----------------------------------------------------------------
+				-----------------------------------------------------
+				|	JDK			                                    |
+				|				                                    |
+				|	-------------------------------------	        |
+				|	|	JRE					            |	        |
+				|	|						            |	        |
+				|	|	-------------		            |	        |
+				|	|	|			|		            |	        |
+				|	|	|	JVM		| + libraries	    |	        |
+				|	|	|			|		            |	        |
+				|	|	|			|		            |	        |
+				|	|	-------------		            |	        |
+				|	|						            |	        |
+				|	-------------------------------------	        |
+				|								                    |
+				|								                    |
+				-----------------------------------------------------
+
+
+
+-> Every method in jave has its own stack.
+-> local variables are stored in stack memory.
+-> Instance variable are store in the heap memory.
+-> why do we need an Array?
+    - To store multiple values of same date type in a single variable.
+    - Arrays are 'Homogeneous' in nature and 'Fixed Size' data structure.
+    - Arrays are 'indexed' based data structure and starts from '0' index.
+-> Static initialization of Array:
+    - int[] arr = new int[] {10, 20, 30}; (or) int[] arr = {10, 20, 30}; // integer array.
+-> Dynamic initialization of Array:
+    - int[] arr = new int[size]; // integer array.
+    - The default values of and Array:
+        - int = 0;
+        -  float = 0.0;
+        - double = 0.0;
+        - char = '\u0000';
+        - boolean = false;
+        - Object = null;
+-> Types of Arrays:
+    - SIngle Dimentional Array.
+    - Multi Dimentional Array.
+    - Jagged Array.
