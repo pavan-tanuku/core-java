@@ -2,6 +2,8 @@ JAVA ---- WORA { Write Once Run Anywhere }
 
 1. Core Java
 
+Day 1:
+
 -> You can run the 'Java Application' only when you have the JVM( java virtual machine ) on your machine.
 -> Java is a 'Platform Independent' but 'JVM' itself is a 'Platform Dependent'.
 -> JVM only understands 'Byte Code', so the '.java' code wrote by the programmer should compile it by 'javac' compiler
@@ -32,6 +34,9 @@ and it should 'error free' then it will generate the 'Byte code(.class)' which i
 -> Every method in jave has its own stack.
 -> local variables are stored in stack memory.
 -> Instance variable are store in the heap memory.
+
+Day 2:
+
 -> why do we need an Array?
     - To store multiple values of same date type in a single variable.
     - Arrays are 'Homogeneous' in nature and 'Fixed Size' data structure.
@@ -47,7 +52,24 @@ and it should 'error free' then it will generate the 'Byte code(.class)' which i
         - char = '\u0000';
         - boolean = false;
         - Object = null;
+
+Day 3:
+
 -> Types of Arrays:
-    - SIngle Dimentional Array.
+    - Single Dimentional Array.
     - Multi Dimentional Array.
-    - Jagged Array.
+    - Jagged Array. (size of internal arrys are different).
+    - The default values of jagger array is 'null'.
+        - If you ininitialize any row, and if you are trying to access that row,
+        you will get the 'NullPointerException' because the default value of jagged array is 'null'.
+        - Even if you write the arr[uninitilizedColumn].length, you will get the 'NullPointerException',
+        because the default value of jagged array is 'null'.
+        - For saft handling of 'NullPointerException', always check the internal array is not 'null',
+        before reading and accessing the elments of internal array.
+
+-> Use for-each loop for for arrays, collections and maps.
+    - for-each loop is also called as 'Enhanced for loop'.
+    - for-each loop is used to read the elements of array, collections and maps.
+    - for-each loop is not used to modify the elements of array, collections and maps.
+    - for-each loop is not used to access the index of array, collections and maps.
+    - for-each loop is not used to access the key and value of maps.
