@@ -37,6 +37,8 @@ and it should 'error free' then it will generate the 'Byte code(.class)' which i
 
 Day 2:
 
+-> The 'new' keyword allocated the memory at runtime in the heap memory.
+
 -> why do we need an Array?
     - To store multiple values of same date type in a single variable.
     - Arrays are 'Homogeneous' in nature and 'Fixed Size' data structure.
@@ -55,21 +57,103 @@ Day 2:
 
 Day 3:
 
--> Types of Arrays:
-    - Single Dimentional Array.
-    - Multi Dimentional Array.
-    - Jagged Array. (size of internal arrys are different).
-    - The default values of jagger array is 'null'.
-        - If you ininitialize any row, and if you are trying to access that row,
-        you will get the 'NullPointerException' because the default value of jagged array is 'null'.
-        - Even if you write the arr[uninitilizedColumn].length, you will get the 'NullPointerException',
-        because the default value of jagged array is 'null'.
-        - For saft handling of 'NullPointerException', always check the internal array is not 'null',
-        before reading and accessing the elments of internal array.
+-> Instance variable as stored in the heap memory.
 
--> Use for-each loop for for arrays, collections and maps.
+-> Types of Arrays:
+    - Single Dimensional Array.
+    - Multi Dimensional Array.
+    - Jagged Array. (size of internal arrays are different).
+    - The default values of jagger array is 'null'.
+        - If you initialize any row, and if you are trying to access that row,
+        you will get the 'NullPointerException' because the default value of jagged array is 'null'.
+        - Even if you write the arr[uninitializedColumn].length, you will get the 'NullPointerException',
+        because the default value of jagged array is 'null'.
+        - For safe handling of 'NullPointerException', always check the internal array is not 'null',
+        before reading and accessing the elements of internal array.
+
+-> Use for-each loop for  arrays, collections and maps.
     - for-each loop is also called as 'Enhanced for loop'.
     - for-each loop is used to read the elements of array, collections and maps.
     - for-each loop is not used to modify the elements of array, collections and maps.
     - for-each loop is not used to access the index of array, collections and maps.
     - for-each loop is not used to access the key and value of maps.
+
+-> Strings are 'Immutable' in nature.
+    - When you create String object using 'new' keyword, it will be created in 'Heap' memory. The reference
+    is stored int the stack memory.
+    - When you try to modify the String object, the previous String object will be deleted by the
+    'Garbage Collector' and the new String object will be created in the 'Heap' memory and points to the
+    same reference in the stack memory.
+    - String literals are stored in 'String Constant Pool(SCP)'.
+    - If SCP has 0 objects and If I create a String object using 'new' keyword, it will create the
+    String object in both 'Heap' memory and 'SCP'.
+
+-> To create a String as 'Mutable', we have:
+    - StringBuffer class. It is 'Synchronized' and 'Thread Safe'.
+    - StringBuilder class. It is 'Non-Synchronized' and 'Not Thread Safe'.
+
+-> The StringBuilder give the 16 characters and If you assign String literal to StringBuilder,
+still it will give the 16 characters. And capacity() != length().
+
+-> Encapsulation:
+    - When-ever we are creating the 'Instance variables', make is as private.
+    - 'private' make the instance variable hidden and only accessible within the same class.
+    - To access the private instance variables, we have to write the 'Getter', and 'Setter' methods.
+
+-> The 'main' method can be overloaded.
+
+-> when we are overloading, the both methods with single parameter and both return void. But one method
+   is taking 'int' primitive type and another method is taking 'Integer' object type. Here when you ar calling
+   that method with argument as '10', the method with 'int' primitive type will execute because
+   the 'int' primitive type is more specific than 'Integer' object type.
+
+-> Static:
+    - When you want, evey object must have same value for a particular instance variable,
+      then we have to declare that instance variable as 'static'.
+    - Static variable is also called as 'Class variable'.
+    - If you modify the static variable for one object, it will reflect for all other objects.
+    - Static variables are called using class name, but it is also possible to call using object reference,
+      but it is not recommended.
+
+    - Static method is also called as 'Class method'.
+    - Static method can access only static variables and static methods.
+    - Static method cannot access non-static variables and non-static methods.
+
+-> static block:
+
+    syntax: static {
+            // static block body.
+    }
+
+    - static block is used to initialize the static instance variables, even how many objects you create,
+      static block will execute only once. Because when you create the object, the constructor will execute and
+      If you write the static variables inside the constructor, it will re-initialize for every object creation,
+      to avoid this scenario, we have to write the static instance variable initialization inside the static block.
+     - static block will get called before the constructor. Because the static is belongs to the class,
+      and the class is loaded first before the object creation and when the class is loaded, the static block will execute.
+     - when the object is not created, the static block also will not execute, why because the class is not loaded yet.
+     - If we want to load the class without creating the object, we have something called
+      Class.forName("className") // to load the class explicitly and 'Class' is a predefined class in java.lang package.
+      But it throws 'ClassNotFoundException', then we can call the static block without creating the object.
+
+-> Anonymous object:
+    - An object which is created without reference variable is called as 'Anonymous Object'.
+    - Anonymous object can be used only once, because we don't have reference variable to reuse the object.
+    - Anonymous object is used when we want to call the method only once, and we don't want to reuse the object.
+
+    syntax:
+    new ClassName().methodName(); // Anonymous object.
+
+-> Upcasting & Down-casting:
+
+-> Wrapper classes:
+    - converting primitive data type to object is called as 'Boxing' and
+      converting object to primitive data type is called as 'Unboxing'.
+    - byte = Byte
+    - short = Short
+    - int = Integer
+    - long = Long
+    - float = Float
+    - double = Double
+    - char = Character
+    - boolean = Boolean
