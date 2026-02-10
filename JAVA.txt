@@ -108,10 +108,11 @@ still it will give the 16 characters. And capacity() != length().
    the 'int' primitive type is more specific than 'Integer' object type.
 
 -> Static:
-    - When you want, evey object must have same value for a particular instance variable,
+    - When you want, every object must have same value for a particular instance variable,
       then we have to declare that instance variable as 'static'.
     - Static variable is also called as 'Class variable'.
     - If you modify the static variable for one object, it will reflect for all other objects.
+    - static methods cannot be overridden, but it can be overloaded.
     - Static variables are called using class name, but it is also possible to call using object reference,
       but it is not recommended.
 
@@ -129,7 +130,7 @@ still it will give the 16 characters. And capacity() != length().
       static block will execute only once. Because when you create the object, the constructor will execute and
       If you write the static variables inside the constructor, it will re-initialize for every object creation,
       to avoid this scenario, we have to write the static instance variable initialization inside the static block.
-     - static block will get called before the constructor. Because the static is belongs to the class,
+     - static block will get called before the constructor. Because the static belongs to the class,
       and the class is loaded first before the object creation and when the class is loaded, the static block will execute.
      - when the object is not created, the static block also will not execute, why because the class is not loaded yet.
      - If we want to load the class without creating the object, we have something called
@@ -157,3 +158,44 @@ still it will give the 16 characters. And capacity() != length().
     - double = Double
     - char = Character
     - boolean = Boolean
+
+
+PROJECT 1 - QUIZ APPLICATION ( Core Java: Console Application )
+
+JAVA DEVELOPER:
+- Syntax & data types, Control flow, OOPs concepts(very important), Exception handling.
+- Beyond surface level:
+    - JVM, JRE, JDK.
+    - Memory management.
+    - Garbage collection.
+    - Multithreading & concurrency.
+- Collections framework & DSA.
+- Database & SQL:
+    - SQL (MySQl / PostgreSQL).
+    - Joins, indexes, transactions.
+    - JDBC basics.
+- Backend & Frameworks:
+    - Servlets & JSP (basics).
+    - Spring and Spring Boot.
+    - REST APIs.
+    - Dependency Injection.
+- Build Real Projects:
+    - project should show:
+        - Clean architecture.
+        - REST APIs.
+        - Database integration.
+        - Error handling.
+    - Examples:
+        - User management system.
+        - E-commerce backend.
+        - Payment or wallet services.
+    - Tools must know:
+        - Git & GitHub.
+        - Maven or Gradle.
+        - Docker (basics).
+        - Postman.
+    - System Design:
+        - Request flow
+        - Caching
+        - Load balancing
+        - Scalability basics.
